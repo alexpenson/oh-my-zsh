@@ -37,11 +37,15 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# define where custom plugins live:
+ZSH_CUSTOM=~/.oh-my-zsh/custom/
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast fasd osx screen history-substring-search history emoji-clock)
+plugins=(gitfast fasd osx screen history-substring-search history emoji-clock zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
