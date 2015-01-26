@@ -8,7 +8,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   
 # Define prompts.
   if [[ $(uname) == "Darwin" ]]; then
-      if [[ $(scutil --get ComputerName) == "Alex-Macbook" ]]; then
+      if [[ $(scutil --get ComputerName) == "lski1848" ]]; then
           PROMPT='%F{blue}❯%f%b '
       elif [[ $(scutil --get ComputerName) == "c2b2rrmd4" ]]; then
           PROMPT='%F{red}❯%f%b '
