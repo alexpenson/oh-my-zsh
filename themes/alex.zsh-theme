@@ -18,7 +18,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   elif [[ $(uname) == "Linux" ]]; then
       if [[ $(hostname) == eos ]]; then
           PROMPT='%F{yellow}❯%f%b '
-      elif [[ $(hostname) == eos ]]; then
+      elif [[ $(hostname) == phos ]]; then
           PROMPT='%F{pink}❯%f%b '
       else
           PROMPT='%F{green}❯%f%b '
