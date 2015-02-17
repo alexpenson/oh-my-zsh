@@ -8,7 +8,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   
 # Define prompts.
   if [[ $(uname) == "Darwin" ]]; then
-      if [[ $(scutil --get ComputerName) == "lski1848" ]]; then
+      if [[ $(scutil --get ComputerName) == "Alex-Macbook" ]]; then
           PROMPT='%F{blue}❯%f%b '
       elif [[ $(scutil --get ComputerName) == "c2b2rrmd4" ]]; then
           PROMPT='%F{red}❯%f%b '
@@ -16,11 +16,9 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
           PROMPT='%F{white}❯%f%b '
       fi
   elif [[ $(uname) == "Linux" ]]; then
-      if [[ $(hostname) == "eos*" ]]; then
+      if [[ $(hostname) == eos ]]; then
           PROMPT='%F{yellow}❯%f%b '
-      elif [[ $(hostname) == "phos*" ]]; then
-          PROMPT='%F{red}❯%f%b '
-      elif [[ $(hostname) == "saba2*" ]]; then
+      else
           PROMPT='%F{green}❯%f%b '
       fi
   else 
@@ -33,7 +31,7 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   ZSH_THEME_GIT_PROMPT_DIRTY=""
   ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-  RPROMPT='${return_status}$(git_prompt_status)%{$reset_color%} %{$fg[cyan]%}%c$(git_prompt_info) %(!.%{$fg_bold[red]%}#.%{$reset_color%}'
+  RPROMPT='${return_status}$(git_prompt_status)%{$reset_color%}'
 
   ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
   ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
@@ -52,7 +50,7 @@ else
   ZSH_THEME_GIT_PROMPT_DIRTY=""
   ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-  RPROMPT='${return_status}$(git_prompt_status) %{$fg[cyan]%}%c$(git_prompt_info) %(!.%{$fg_bold[red]%}#.%{$reset_color%}'
+  RPROMPT='${return_status}$(git_prompt_status)'
 
   ZSH_THEME_GIT_PROMPT_ADDED=" ✚"
   ZSH_THEME_GIT_PROMPT_MODIFIED=" ✹"
