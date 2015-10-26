@@ -18,11 +18,11 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   elif [[ $(uname) == "Linux" ]]; then
       # echo $(uname)
       # echo $(hostname)
-      if [[ $(hostname) == "eos" ]]; then
+      if [[ $(hostname) == "luna.cbio.private" ]]; then
           PROMPT='%F{yellow}❯%f%b '
-      elif [[ $(hostname) == "phos" ]]; then
+      elif [[ $(hostname) =~ "s0[12].cbio.private" ]]; then
           PROMPT='%F{red}❯%f%b '
-      elif [[ $(hostname) == "saba2.cbio.mskcc.org" ]]; then
+      else
           PROMPT='%F{green}❯%f%b '
       fi
   else 
