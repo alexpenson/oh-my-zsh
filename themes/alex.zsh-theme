@@ -19,9 +19,9 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
       # echo $(uname)
       # echo $(hostname)
       if [[ $(hostname) == "luna.cbio.private" ]]; then
-          PROMPT='%F{yellow}❯%f%b '
-      elif [[ $(hostname) =~ "s0[12].cbio.private" ]]; then
           PROMPT='%F{red}❯%f%b '
+      elif [[ $(hostname) =~ "s0[12].cbio.private" ]]; then
+          PROMPT='%F{yellow}❯%f%b '
       else
           PROMPT='%F{green}❯%f%b '
       fi
